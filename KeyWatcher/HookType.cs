@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace League_Of_Legends_Timer {
+﻿namespace KeyWatcher {
     /// <summary>
     /// List with different hooks
     /// see: http://msdn.microsoft.com/en-us/library/windows/desktop/ms644959(v=vs.85).aspx

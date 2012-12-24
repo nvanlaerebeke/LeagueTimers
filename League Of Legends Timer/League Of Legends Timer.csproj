@@ -58,16 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="League of Legends\BitmapCreator.cs" />
-    <Compile Include="League of Legends\Hotkeys\CallbackEventArgs.cs" />
-    <Compile Include="League of Legends\Hotkeys\HookType.cs" />
-    <Compile Include="League of Legends\Hotkeys\KeyboardEvents.cs" />
-    <Compile Include="League of Legends\Hotkeys\KeyboardHookStruct.cs" />
-    <Compile Include="League of Legends\Hotkeys\ModifierKeys.cs" />
-    <Compile Include="League of Legends\Hotkeys\KeyboardKeyState.cs" />
-    <Compile Include="League of Legends\Hotkeys\WindowsHook.cs" />
     <Compile Include="League of Legends\LeagueKeyListener.cs" />
     <Compile Include="League of Legends\LeagueType.cs" />
-    <Compile Include="League of Legends\Hotkeys\HotKey.cs" />
     <Compile Include="League of Legends\LeagueHelper.cs" />
     <Compile Include="League of Legends\Timers\LeagueTimer.cs" />
     <Compile Include="League of Legends\Timers\LeagueTimers.cs" />
@@ -76,6 +68,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\KeyWatcher\KeyWatcher.csproj">
+      <Project>{84B015A1-2226-42A9-B972-BD40C17B86DC}</Project>
+      <Name>KeyWatcher</Name>
+    </ProjectReference>
     <ProjectReference Include="..\lgLCD\LgLCD.csproj">
       <Project>{2CCDDFF3-7D5A-4D46-8E64-CE7B14C27BAE}</Project>
       <Name>LgLCD</Name>

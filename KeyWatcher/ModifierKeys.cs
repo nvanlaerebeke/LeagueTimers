@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace League_Of_Legends_Timer {
+namespace KeyWatcher {
     /// <summary>
     /// The enumeration of possible modifiers.
     /// </summary>
