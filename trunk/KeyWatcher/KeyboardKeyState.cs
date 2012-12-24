@@ -1,7 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace League_Of_Legends_Timer {
+namespace KeyWatcher {
     public static class KeyboardKeyState {
         // Virtual key codes.
         // http://www.codeproject.com/KB/system/keyboard.aspx

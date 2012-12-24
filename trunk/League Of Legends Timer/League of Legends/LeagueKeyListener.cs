@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using KeyWatcher;
 
 namespace League_Of_Legends_Timer {
     /// <summary>
@@ -21,6 +22,10 @@ namespace League_Of_Legends_Timer {
         /// </summary>
         public static event keyPressed keyPressed;
 
+        /// <summary>
+        /// Keyboard events 
+        /// </summary>
+        private static KeyboardEvents objEvents;
 
         /// <summary>
         /// Constructor
@@ -28,9 +33,9 @@ namespace League_Of_Legends_Timer {
         /// <param name="pKeys">List of keys that need to be listen to</param>
         public static void Listen(List<HotKey> pKeys) {
             _lstKeys = pKeys;
-            
+
             //Listen to all keyboard hits
-            KeyboardEvents objEvents = new KeyboardEvents(true);
+            objEvents = new KeyboardEvents(true);
             objEvents.KeyPress += new KeyPressed(objEvents_KeyPress);
         }
 

@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace League_Of_Legends_Timer {
+namespace KeyWatcher {
     /// <summary>
     /// Delegate used for when keyboard keys are pressed
     /// </summary>
@@ -13,7 +13,7 @@ namespace League_Of_Legends_Timer {
     /// <summary>
     /// Provides an independent high level interface for the keyboard events.
     /// </summary>
-    public class KeyboardEvents : IDisposable {
+    public class KeyboardEvents {
         /// <summary>
         /// Occurs when a key is pressed.
         /// </summary>
@@ -53,17 +53,6 @@ namespace League_Of_Legends_Timer {
 
         #endregion
 
-        #region IDisposable Members
-
-        /// <summary>
-        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
-        /// </summary>
-        public void Dispose() {
-            keyboardHook.Dispose();
-        }
-
-        #endregion
-
         #region Private Core Methods
         /// <summary>
         /// Handles the key press event that was caught
@@ -90,7 +79,6 @@ namespace League_Of_Legends_Timer {
             //mark the key hit as 'handled'\
             keyboardHook.Handled = true;
         }
-
         #endregion
     }
    

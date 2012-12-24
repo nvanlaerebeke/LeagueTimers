@@ -5,7 +5,7 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 
-namespace League_Of_Legends_Timer {
+namespace KeyWatcher {
     /// <summary>
     /// Represents the method that will handle the Callback event.
     /// </summary>
@@ -23,6 +23,7 @@ namespace League_Of_Legends_Timer {
 
         private IntPtr hookId = IntPtr.Zero;
         private delegate int InternalCallbackHandler(int code, IntPtr wParam, IntPtr lParam);
+
         // Keep a reference so that the GC won't wipe it!
         private InternalCallbackHandler internalCallback;
 
@@ -82,12 +83,13 @@ namespace League_Of_Legends_Timer {
 
         #endregion
 
+        private CallbackHandler handler;
         /// <summary>
         /// Raises the <see cref="E:Callback"/> event.
         /// </summary>
         /// <param name="e">The <see cref="ShortcutVisualizer.Native.CallbackEventArgs"/> instance containing the event data.</param>
         protected virtual void OnCallback(CallbackEventArgs e) {
-            CallbackHandler handler = Callback;
+            handler = Callback;
             if (handler != null) {
                 handler(this, e);
             }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace League_Of_Legends_Timer {
+namespace KeyWatcher {
 
     /// <summary>
     /// HotKey class that contains the key with the modifier

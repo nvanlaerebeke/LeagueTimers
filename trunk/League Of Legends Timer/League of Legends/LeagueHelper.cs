@@ -2,13 +2,19 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using LgLCD;
+using KeyWatcher;
 
 namespace League_Of_Legends_Timer {
     class LeagueHelper {
         /// <summary>
         /// Object that keeps track of all league of legends timers
         /// </summary>
-        LeagueTimers _objLeagueTimers;
+        private LeagueTimers _objLeagueTimers;
+
+        /// <summary>
+        /// Hotkey list
+        /// </summary>
+        private List<HotKey> _lstHotKeys;
 
         #region Public methods
         /// <summary>
@@ -23,14 +29,14 @@ namespace League_Of_Legends_Timer {
             LcdHelper.buttonPressed += new buttonPressed(LcdHelper_buttonPressed);
 
             //Register all the hotkeys
-            List<HotKey> lstKeys = new List<HotKey>();
-            lstKeys.Add(new HotKey(Keys.F1, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
-            lstKeys.Add(new HotKey(Keys.F2, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
-            lstKeys.Add(new HotKey(Keys.F3, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
-            lstKeys.Add(new HotKey(Keys.F4, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
-            lstKeys.Add(new HotKey(Keys.F5, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
-            lstKeys.Add(new HotKey(Keys.F6, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
-            LeagueKeyListener.Listen(lstKeys);
+            _lstHotKeys = new List<HotKey>();
+            _lstHotKeys.Add(new HotKey(Keys.F1, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
+            _lstHotKeys.Add(new HotKey(Keys.F2, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
+            _lstHotKeys.Add(new HotKey(Keys.F3, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
+            _lstHotKeys.Add(new HotKey(Keys.F4, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
+            _lstHotKeys.Add(new HotKey(Keys.F5, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
+            _lstHotKeys.Add(new HotKey(Keys.F6, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
+            LeagueKeyListener.Listen(_lstHotKeys);
 
             //start listening to events
             LeagueKeyListener.keyPressed += new keyPressed(LeagueKeyListener_keyPressed);

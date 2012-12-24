@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace League_Of_Legends_Timer {
+namespace KeyWatcher {
     /// <summary>
     /// Callback event args we get back from the windowshook
     /// </summary>
