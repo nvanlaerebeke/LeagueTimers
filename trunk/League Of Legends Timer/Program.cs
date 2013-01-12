@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using LgLCD;
+using LgLCD.Net;
 
 namespace League_Of_Legends_Timer
 {

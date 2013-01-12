@@ -33,7 +33,7 @@ namespace League_Of_Legends_Timer {
         /// <param name="pKeys">List of keys that need to be listen to</param>
         public static void Listen(List<HotKey> pKeys) {
             _lstKeys = pKeys;
-
+            
             //Listen to all keyboard hits
             objEvents = new KeyboardEvents(true);
             objEvents.KeyPress += new KeyPressed(objEvents_KeyPress);

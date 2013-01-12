@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using LgLCD;
+using LgLCD.Net;
 using KeyWatcher;
 
 namespace League_Of_Legends_Timer {
@@ -26,8 +26,8 @@ namespace League_Of_Legends_Timer {
             _objLeagueTimers = new LeagueTimers();
 
             //Listen to the LCD display button events 
-            LcdHelper.buttonPressed += new buttonPressed(LcdHelper_buttonPressed);
-
+            LcdManager.buttonPressed += new buttonPressed(LcdHelper_buttonPressed);
+            
             //Register all the hotkeys
             _lstHotKeys = new List<HotKey>();
             _lstHotKeys.Add(new HotKey(Keys.F1, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
@@ -37,7 +37,7 @@ namespace League_Of_Legends_Timer {
             _lstHotKeys.Add(new HotKey(Keys.F5, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
             _lstHotKeys.Add(new HotKey(Keys.F6, ModifierKeys.Shift | ModifierKeys.Control | ModifierKeys.Alt));
             LeagueKeyListener.Listen(_lstHotKeys);
-
+            
             //start listening to events
             LeagueKeyListener.keyPressed += new keyPressed(LeagueKeyListener_keyPressed);
         }

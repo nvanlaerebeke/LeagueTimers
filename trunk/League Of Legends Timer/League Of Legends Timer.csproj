@@ -52,30 +52,28 @@
     <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="KeyWatcher">
+      <HintPath>..\lib\KeyWatcher.dll</HintPath>
+    </Reference>
+    <Reference Include="LgLCD, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\LgLCD.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="League of Legends\BitmapCreator.cs" />
-    <Compile Include="League of Legends\LeagueKeyListener.cs" />
-    <Compile Include="League of Legends\LeagueType.cs" />
-    <Compile Include="League of Legends\LeagueHelper.cs" />
-    <Compile Include="League of Legends\Timers\LeagueTimer.cs" />
-    <Compile Include="League of Legends\Timers\LeagueTimers.cs" />
+    <Compile Include="BitmapCreator.cs" />
+    <Compile Include="HotKeys\HotKey.cs" />
+    <Compile Include="HotKeys\LeagueKeyListener.cs" />
+    <Compile Include="Misc\LeagueType.cs" />
+    <Compile Include="LeagueHelper.cs" />
+    <Compile Include="Timers\LeagueTimer.cs" />
+    <Compile Include="Timers\LeagueTimers.cs" />
     <Compile Include="Misc\Settings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\KeyWatcher\KeyWatcher.csproj">
-      <Project>{84B015A1-2226-42A9-B972-BD40C17B86DC}</Project>
-      <Name>KeyWatcher</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\lgLCD\LgLCD.csproj">
-      <Project>{2CCDDFF3-7D5A-4D46-8E64-CE7B14C27BAE}</Project>
-      <Name>LgLCD</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
